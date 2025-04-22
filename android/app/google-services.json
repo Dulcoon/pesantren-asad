@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "461434572547",
+    "project_id": "psantren-asad",
+    "storage_bucket": "psantren-asad.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:461434572547:android:678c1146d8ff1596a42336",
+        "android_client_info": {
+          "package_name": "com.example.pesantren_asad"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDG5foEaxnOuSxBn13ae0_YJPHDmf_gMPI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
