@@ -4,8 +4,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'dart:io';
 import 'package:image_picker/image_picker.dart';
-import 'package:pesantren_asad/pages/keuangan/keuangan_screen.dart';
 import 'package:flutter/services.dart';
+import 'detail_transaksi_screen.dart';
 
 class PaymentSummaryScreen extends StatefulWidget {
   final String bankName;
@@ -254,9 +254,23 @@ class _PaymentSummaryScreenState extends State<PaymentSummaryScreen> {
                       fontSize: 14.0,
                     );
 
+                    // Navigasi ke halaman Detail Transaksi
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => KeuanganPage()),
+                      MaterialPageRoute(
+                        builder: (context) => DetailTransaksiScreen(
+                          title: 'Total Setor',
+                          amount: widget.amount.toStringAsFixed(0),
+                          date: DateTime.now()
+                              .toString(), // Waktu transaksi saat ini
+                          transactionId:
+                              'q239ke99317ksjht...', // ID transaksi (contoh)
+                          status: 'Berhasil',
+                          recipientName: 'PESANTREN',
+                          recipientAccount: '098123486759020',
+                          message: 'Pembayaran sewa asrama',
+                        ),
+                      ),
                     );
                   } catch (e) {
                     Fluttertoast.showToast(
